@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Grid</title>
+    <style>
+        .ooo {
+            text-align: center;   
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+            gap: 10px; /* Space between items */
+        }
+
+        .child {
+            background-color: #ddd;
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #c1 {
+            background-color: rgb(186, 104, 118);
+        }
+
+        #c2 {
+            background-color: rgb(175, 16, 42);
+        }
+
+        #c3 {
+            background-color: rgb(30, 236, 3);
+        }
+
+        #c4 {
+            background-color: rgb(220, 101, 10);
+        }
+
+        #c5 {
+            background-color: rgb(190, 190, 15);
+        }
+
+        #c6 {
+            background-color: rgb(0, 8, 255);
+        }
+    </style>
+</head>
+<body bgcolor="black">
+    <div class="ooo">
+        <div id="c1" class="child">Monday</div>
+        <div id="c2" class="child">Tuesday</div>
+        <div id="c3" class="child">Wednesday</div>
+        <div id="c4" class="child">Thursday</div>
+        <div id="c5" class="child">Friday</div>
+        <div id="c6" class="child">Saturday</div>
+
+        <div id="c1" class="child">Monday2</div>
+        <div id="c2" class="child">Tuesday2</div>
+        <div id="c3" class="child">Wednesday2</div>
+        <div id="c4" class="child">Thursday2</div>
+        <div id="c5" class="child">Friday2</div>
+        <div id="c6" class="child">Saturday2</div>
+
+        <div id="c1" class="child">Monday3</div>
+        <div id="c2" class="child">Tuesday3</div>
+        <div id="c3" class="child">Wednesday3</div>
+        <div id="c4" class="child">Thursday3</div>
+        <div id="c5" class="child">Friday3</div>
+        <div id="c6" class="child">Saturday3</div>
+
+        <div id="c1" class="child">Monday4</div>
+        <div id="c2" class="child">Tuesday4</div>
+        <div id="c3" class="child">Wednesday4</div>
+        <div id="c4" class="child">Thursday4</div>
+        <div id="c5" class="child">Friday4</div>
+        <div id="c6" class="child">Saturday4</div>
+    </div>
+</body>
+</html>

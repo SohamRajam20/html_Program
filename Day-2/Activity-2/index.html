@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementing Basic HTML5 Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .video-container {
+            text-align: center;
+        }
+
+        .canvas-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        canvas {
+            border: 1px solid #ccc;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>HTML5 Features Showcase</h1>
+        <nav>
+            <ul>
+                <li><a href="#home"></a>Home</li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="multimedia">
+            <h2>Multimedia Integration</h2>
+            <div class="video-container">
+                <h3>HTML5 Video</h3>
+                <video width="640" height="360" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="audio-container" style="text-align: center; margin-top: 20px;">
+                <h3>HTML5 Audio</h3>
+                <audio controls>
+                    <source src="mp31.mp3" type="audio/mp3">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+        </section>
+
+        <section id="interactive">
+            <h2>Interactive Canvas Graphics</h2>
+            <div class="canvas-container">
+                <h3>Draw Shapes on the Canvas</h3>
+                <canvas id="drawCanvas" width="600" height="400"></canvas>
+                <br>
+                <button onclick="clearCanvas()">Clear Canvas</button>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About This Page</h2>
+            <article>
+                <h3>Overview</h3>
+                <p>This page demonstrates key features of HTML5, 
+                    including multimedia integration, semantic elements, 
+                    and the canvas element for drawing shapes. </p>
+            </article>
+        </section>
+    </main>
+     <br> <br> <br>
+    <footer>
+        <p>&copy; 2025 HTML5 Features Showcase</p>
+    </footer>
+
+    <script>
+        // Canvas Drawing Functionality (for drawing shapes)
+        const canvas = document.getElementById('drawCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let isDrawing = false;
+        let startX, startY;
+
+        // Draw rectangle or circle when mouse is pressed down
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            startX = e.offsetX;
+            startY = e.offsetY;
+        });
+
+        // Draw shapes when mouse is moving
+        canvas.addEventListener('mousemove', (e) => {
+            if (isDrawing) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas while drawing
+                const currentX = e.offsetX;
+                const currentY = e.offsetY;
+                const width = currentX - startX;
+                const height = currentY - startY;
+
+                // Draw Rectangle: Update the shape size while mouse moves
+                ctx.beginPath();
+                ctx.rect(startX, startY, width, height);
+                ctx.strokeStyle = 'blue'; // Rectangle border color
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Optionally, you can draw a circle instead of a rectangle:
+                // ctx.beginPath();
+                // const radius = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+                // ctx.arc(startX, startY, radius, 0, 2 * Math.PI);
+                // ctx.strokeStyle = 'green';
+                // ctx.lineWidth = 2;
+                // ctx.stroke();
+            }
+        });
+
+        // Stop drawing when mouse is released
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
+
+        // Clear canvas function
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+
+</body>
+
+</html>
+
