@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML5 Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #3700b3;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        video, audio {
+            display: block;
+            margin: 10px auto;
+            max-width: 100%;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #6200ea;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Semantic Header -->
+    <header>
+        <h1>Explore Advanced HTML5 Features</h1>
+        <p>A showcase of multimedia, semantic elements, and canvas graphics.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#video">Video</a>
+        <a href="#audio">Audio</a>
+        <a href="#canvas">Canvas</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Video Section -->
+        <section id="video">
+            <h2>Embedded Video</h2>
+            <p>Enjoy this sample video embedded directly into the page.</p>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+
+        <!-- Audio Section -->
+        <section id="audio">
+            <h2>Embedded Audio</h2>
+            <p>Listen to a sample audio track below.</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+                Your browser does not support HTML5 audio.
+            </audio>
+        </section>
+
+        <!-- Canvas Section -->
+        <section id="canvas">
+            <h2>Interactive Canvas Graphics</h2>
+            <p>Click anywhere on the canvas to draw colorful circles.</p>
+            <canvas id="drawingCanvas" width="600" height="400"></canvas>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 HTML5 Showcase. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Canvas Interaction -->
+    <script>
+        const canvas = document.getElementById('drawingCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Function to draw a circle at a specific position
+        function drawCircle(x, y) {
+            const colors = ['#FF5722', '#4CAF50', '#2196F3', '#FFC107', '#E91E63'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const radius = Math.random() * 30 + 10;
+
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = randomColor;
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        // Event listener to draw circles on click
+        canvas.addEventListener('click', (event) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            drawCircle(x, y);
+        });
+    </script>
+</body>
+</html>

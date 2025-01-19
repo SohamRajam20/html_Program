@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model and Positioning</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+      
+        .container {
+            width: 300px;
+            height: 200px;
+            background-color: #4CAF50; 
+            color: white;
+            padding: 20px; 
+            border: 5px solid #333; 
+            margin: 20px; 
+            position: relative; 
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); 
+        }
+
+       
+        .nested {
+            width: 100px;
+            height: 50px;
+            background-color: #FF5722;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            position: absolute; 
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>CSS Box Model</h2>
+        <p>This is a container demonstrating the CSS box model.</p>
+      
+        <div class="nested">Nested Box</div>
+    </div>
+</body>
+</html>
