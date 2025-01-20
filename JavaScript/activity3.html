@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Syntax Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .output {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic JavaScript Syntax</h1>
+    <button onclick="runExample()">Run Example</button>
+    <div id="results" class="output"></div>
+
+    <script>
+        // Single-line comment: This function demonstrates basic JavaScript syntax
+        function runExample() {
+            // Variable declarations with different data types
+            let message = "Hello, JavaScript!"; // String
+            let number = 42; // Number
+            let isJavaScriptFun = true; // Boolean
+            let undefinedVariable; // Undefined
+            let nullValue = null; // Null
+            
+            /* Multi-line comment:
+               This section combines the variables into a single output.
+               It also demonstrates using console.log and document output. */
+
+            // Output to the console
+            console.log("Message:", message);
+            console.log("Number:", number);
+            console.log("Is JavaScript fun?", isJavaScriptFun);
+            console.log("Undefined variable:", undefinedVariable);
+            console.log("Null value:", nullValue);
+
+            // Output to the document
+            let results = `<h2>Output from JavaScript</h2>`;
+            results += `Message: ${message}<br>`;
+            results += `Number: ${number}<br>`;
+            results += `Is JavaScript fun? ${isJavaScriptFun}<br>`;
+            results += `Undefined variable: ${undefinedVariable}<br>`;
+            results += `Null value: ${nullValue}<br>`;
+            
+            // Update the output div with the results
+            document.getElementById("results").innerHTML = results;
+        }
+    </script>
+</body>
+</html>

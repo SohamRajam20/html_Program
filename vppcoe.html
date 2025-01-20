@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVPPCOE College</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f0f8ff; /* Light sky blue background */
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: orange;
+            color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            font-size: 1.75rem;
+            color: #fff;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 2rem; /* Space between each nav item */
+        }
+
+        .navbar ul li {
+            padding: 0.5rem;
+        }
+
+        .navbar a {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .navbar a:hover {
+            color: #f0f8ff;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            background: linear-gradient(#f49a09cc, rgba(240, 248, 255, 0.8)),
+                        url('https://via.placeholder.com/1920x600') center/cover no-repeat;
+            text-align: center;
+            padding: 5rem 2rem;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: yellowgreen; /* Dark Blue */
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            padding: 0.75rem 1.5rem;
+            background-color: #fff;
+            color: orange;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .hero .btn:hover {
+            background-color: orange;
+            color: #fff;
+        }
+
+        /* About Section */
+        .about {
+            padding: 3rem 2rem;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .about h2 {
+            margin-bottom: 1rem;
+            color: orange;
+        }
+
+        .about p {
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .about .cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .about .card {
+            background: #f0f8ff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .about .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .about .card h3 {
+            color: orange;
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 3rem 2rem;
+            text-align: center;
+            background: #f0f8ff;
+        }
+
+        .programs h2 {
+            margin-bottom: 1rem;
+            color: orange;
+        }
+
+        .programs .program {
+            margin: 1rem 0;
+        }
+
+        .programs .program h3 {
+            color: #333;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 3rem 2rem;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .contact h2 {
+            margin-bottom: 1rem;
+            color: orange;
+        }
+
+        .contact .btn {
+            padding: 0.75rem 1.5rem;
+            background-color: orange;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .contact .btn:hover {
+            background-color: #fff;
+            color: orange;
+            border: 2px solid orange;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: orange;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>PVPPCOE College</h1>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h1>Welcome to PVPPCOE College</h1>
+        <p>Empowering Minds, Shaping Futures</p>
+        <button class="btn">Discover More</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>PVPPCOE College is committed to academic excellence and holistic development of its students.</p>
+        <div class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Campus">
+                <h3>Modern Campus</h3>
+                <p>Experience a vibrant campus life with world-class infrastructure.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Faculty">
+                <h3>Expert Faculty</h3>
+                <p>Learn from experienced professionals in diverse fields.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Library">
+                <h3>Extensive Library</h3>
+                <p>Access a vast collection of resources for all your learning needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <h2>Our Programs</h2>
+        <div class="program">
+            <h3>Undergraduate Programs</h3>
+            <p>Prepare for a successful career with our undergraduate courses.</p>
+        </div>
+        <div class="program">
+            <h3>Postgraduate Programs</h3>
+            <p>Advance your knowledge and skills with our postgraduate offerings.</p>
+        </div>
+        <div class="program">
+            <h3>Research Opportunities</h3>
+            <p>Contribute to cutting-edge research and innovation.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Get in touch with us today.</p>
+        <button class="btn">Email Us</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PVPPCOE College. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
